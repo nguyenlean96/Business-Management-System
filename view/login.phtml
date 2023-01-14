@@ -1,0 +1,12 @@
+<?php
+  include 'header.php';
+  $error = _get('login_error');
+?>
+<?= login_form($error) ?>
+<div class="col-4 mx-auto text-center" style="margin-bottom: 10vh;">
+  <hr>
+  <a style="padding: .3em 5em;" class="btn btn-secondary" href="?page=manage_employee">Create new account</a>
+</div>
+<?php
+  include 'footer.php';
+?>

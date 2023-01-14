@@ -1,0 +1,82 @@
+<?php
+  $count = 1;
+  include 'header.php';
+?>
+<div class="card gap-1 col-8 mx-auto" style="margin: 10vh 0; box-shadow: 3px 3px 16px 1px #ccc;">
+  <h5 class="card-header">Add new client</h5>
+  <div class="card-body" style="padding: 2em;">
+    <form class="row g-3 needs-validation" method="post">
+      <input type="hidden" name="action" value="add_new_client">
+      <div class="col-md-5">
+        <label for="validationCustom0<?= $count ?>" class="form-label">First name</label>
+        <input name="client_fName" type="text" class="form-control" id="validationCustom0<?= $count++ ?>" required>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="col-md-5">
+        <label for="validationCustom0<?= $count ?>" class="form-label">Last name</label>
+        <input name="client_lName" type="text" class="form-control" id="validationCustom0<?= $count++ ?>" required>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="col-md-2"></div>
+
+      <div class="col-md-5">
+        <label for="validationCustom0<?= $count ?>" class="form-label">Company Number</label>
+        <input name="client_company_num" type="text" class="form-control" id="validationCustom0<?= $count++ ?>" required>
+        <div class="invalid-feedback">
+          Please provide a valid city.
+        </div>
+      </div>
+
+      <div class="col-md-7">
+        <label for="validationCustom0<?= $count ?>" class="form-label">Company Name</label>
+        <input name="client_company_name" type="text" class="form-control" id="validationCustom0<?= $count++ ?>" required>
+        <div class="invalid-feedback">Please enter a genuine number.</div>
+      </div>
+
+      <div class="col-md-6">
+        <label for="validationCustom0<?= $count ?>" class="form-label">Phone Number</label>
+        <input name="client_phone_num" type="text" class="form-control" id="validationCustom0<?= $count++ ?>" required>
+        <div class="invalid-feedback">Please enter a valid phone number</div>
+      </div>
+      <div class="col-md-6">
+        <label for="validationCustom0<?= $count ?>" class="form-label">Email Address:</label>
+        <input name="client_mail" type="text" class="form-control" id="validationCustom0<?= $count++ ?>" required>
+        <div class="invalid-feedback">Please enter a valid email address.</div>
+      </div>
+      <div class="col-md-12">
+        <label for="basic-url" class="form-label">Client website</label>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon3">https://www.</span>
+          <input name="client_web" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+        </div>
+      </div>
+
+      
+      <div class="col-md-6">
+        <label for="validationCustom0<?= $count ?>" class="form-label">Carrier</label>
+        <input name="client_carrier" type="text" class="form-control" id="validationCustom0<?= $count++ ?>" required>
+        <div class="invalid-feedback">Please enter a valid carrier for your cell number.</div>
+      </div>
+
+      <div class="col-md-6">
+        <label for="validationCustom0<?= $count ?>" class="form-label">Cell Number (for receiving notifications)</label>
+        <input name="client_cell_num" type="text" class="form-control" id="validationCustom0<?= $count++ ?>" required>
+        <div class="invalid-feedback">Please enter a valid phone number</div>
+      </div>
+      
+      <div class="col-md-6">
+        <label for="validationCustom0<?= $count ?>" class="form-label">HST Number</label>
+        <input name="client_hst" type="text" class="form-control" id="validationCustom0<?= $count++ ?>" required>
+        <div class="invalid-feedback">Please enter a valid HST Number</div>
+      </div>
+      <div class="col-md-6"></div>
+
+      <div class="col-12 mx-auto text-center">
+        <button class="btn btn-primary" type="submit" style="margin-top: 2vh; padding: .4em 8em;">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<?php
+  include 'footer.php';
+?>
